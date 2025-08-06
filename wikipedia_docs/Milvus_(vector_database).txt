@@ -1,0 +1,77 @@
+Milvus is a distributed vector database developed by Zilliz. It is available as both open-source software and a cloud service called Zilliz Cloud.
+Milvus is an open-source project under the LF AI & Data Foundation and is distributed under the Apache License 2.0.
+
+
+== History ==
+Milvus has been developed by Zilliz since 2017.
+Milvus joined Linux Foundation as an incubation project in January 2020 and became a graduate in June 2021. The details about its architecture and possible applications were presented at ACM SIGMOD Conference in 2021.
+Milvus 2.0, a major redesign of the whole product with a new architecture, was released in January 2022.
+
+
+== Features ==
+
+
+=== Similarity search ===
+Various similarity search-related features are available in Milvus:
+
+In-memory, on-disk and GPU indices,
+Single query, batch query and range query search,
+Support of sparse vectors, binary vectors, JSON and arrays,
+FP32, FP16 and BF16 data types,
+Euclidean distance, inner product distance and cosine distance support for floating-point data,
+Hamming distance and jaccard distance for binary data,
+Support of graph indices (including HNSW), Inverted-lists based indices and a brute-force search.
+Support of vector quantization for lossy input data compression, including product quantization (PQ) and scalar quantization (SQ), that trades stored data size for accuracy,
+Re-ranking.
+Milvus' similarity search engine relies on heavily-modified forks of third-party open-source similarity search libraries, such as Faiss, DiskANN and hnswlib.
+Milvus includes optimizations for I/O data layout, specific to graph search indices.
+
+
+=== Database ===
+As a database, Milvus provides the following features:
+
+Support for column-oriented databases
+Four supported data consistency levels, including strong consistency and eventual consistency
+Data sharding
+Streaming data ingestion, which allows processing and ingestion of data in real-time as it arrives
+A dynamic schema, which allows insertion of data without a predefined schema
+Independent storage and compute layers
+Support for multi-tenancy scenarios (database-oriented, collection-oriented, partition-oriented)
+Memory-mapped data storage
+Role-based access control
+Multi-vector and hybrid search
+
+
+=== Deployment options ===
+Milvus can be deployed as an embedded database, standalone server, or distributed cluster. Zilliz Cloud offers a fully managed version.
+
+
+=== GPU support ===
+Milvus provides GPU accelerated index building and search using Nvidia CUDA technology via the Nvidia RAFT library, including a recent GPU-based graph indexing algorithm known as CAGRA.
+
+
+=== Integration ===
+Milvus provides official SDK clients for Java, NodeJS, Python and Go. An additional C# SDK client was contributed by Microsoft. The database can integrate with DataDog, Prometheus and Grafana for monitoring and alerts, as well as generative AI frameworks Haystack, LangChain, IBM Watsonx, and those provided by OpenAI.
+Several storage providers have built integrations with Milvus to support AI workloads and large-scale vector search. These integrations aim to optimize performance, simplify inferencing workflows, and enhance data management capabilities:
+
+Pure Storage
+Cloudian
+Weka.io
+DDN
+
+
+== See also ==
+
+Nearest neighbor search
+Similarity search
+Vector database
+Vector embedding
+Vector quantization
+
+
+== References ==
+
+
+== External links ==
+Official website
+milvus on GitHub
